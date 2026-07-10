@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="UG3I--ZmnY0Frgddp2QZZ5Ilq8Jc4wJzRovlmd1R6pA" />
+    
     <title>Zadet Preparatory & International Secondary School | School Management App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -89,7 +89,7 @@
 <body class="bg-white text-[#1E293B]">
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass py-4">
+    <!-- <nav class="fixed w-full z-50 glass py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="flex items-center gap-2">
                 <div class="bg-[#2563EB] p-2 rounded-lg">
@@ -107,7 +107,65 @@
                 Get Started
             </a>
         </div>
-    </nav>
+    </nav> -->
+    <!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 min-w-0">
+                <div class="bg-[#2563EB] p-2 rounded-xl flex-shrink-0">
+                    <i data-lucide="graduation-cap" class="text-white w-6 h-6"></i>
+                </div>
+
+                <div class="min-w-0">
+                    <h1 class="font-bold text-sm sm:text-base lg:text-lg text-[#1E293B] leading-tight truncate">
+                        Zadet Preparatory
+                    </h1>
+                    <p class="text-xs text-slate-500 truncate">
+                        International Secondary School
+                    </p>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8 font-medium">
+                <a href="#features" class="hover:text-blue-600 transition">Features</a>
+                <a href="#why-us" class="hover:text-blue-600 transition">Why Us</a>
+                <a href="#testimonials" class="hover:text-blue-600 transition">Testimonials</a>
+            </div>
+
+            <!-- Desktop Button -->
+            <div class="hidden lg:block">
+                <a href="https://zadet-prep-int-sec-school.web.app"
+                    class="bg-[#2563EB] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+                    Get Started
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden pb-5">
+            <div class="flex flex-col gap-5 mt-4">
+                <a href="#features">Features</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#testimonials">Testimonials</a>
+
+                <a href="https://zadet-prep-int-sec-school.web.app"
+                    class="bg-[#2563EB] text-white text-center py-3 rounded-xl">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 overflow-hidden bg-[#F8FAFC]">
@@ -124,7 +182,7 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://drive.google.com/file/d/1uEoErpTsd_iV4E-DdDkbDzTetUXHnQVi/view?usp=drive_link" download
+                    <a href="https://drive.google.com/file/d/1BHcgqR0fO9G34CijZU8W13LZGu7LbRwl/view?usp=drive_link" download
                         class="bg-[#2563EB] text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-700 transition">
                         <i data-lucide="play" class="fill-current"></i> Download for Android
                     </a>
@@ -375,7 +433,7 @@
                     <p class="text-blue-100 mb-10 max-w-2xl mx-auto text-lg">Join hundreds of schools already using
                         Zadet Preparatory & International Secondary School to modernize their daily operations.</p>
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="https://drive.google.com/file/d/1uEoErpTsd_iV4E-DdDkbDzTetUXHnQVi/view?usp=drive_link" download
+                        <a href="https://drive.google.com/file/d/1BHcgqR0fO9G34CijZU8W13LZGu7LbRwl/view?usp=drive_link" download
                              class="bg-white text-[#2563EB] px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition">
                             Download App
                         </a>
@@ -442,6 +500,16 @@
         // Initialize Lucide Icons
         lucide.createIcons();
     </script>
+    <script>
+    lucide.createIcons();
+
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
 </body>
 
 </html>
